@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="demoApp2.Views.AboutPage"
+             xmlns:vm="clr-namespace:demoApp2.ViewModels"
+             Title="Simple Calculator Demo"
+             BackgroundColor="DarkRed">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">darkred</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="DarkRed"  VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Label Text="Simple Calucaltor Demo" FontSize="30" FontAttributes="Bold"></Label>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1" BackgroundColor="Black">
+            <StackLayout Orientation="Vertical" Padding="10,20,40,20" Spacing="0">
+                <Editor IsReadOnly="True" BackgroundColor="DarkSlateGray" Text="0" FontSize="50" HeightRequest="90"></Editor>
+                <StackLayout HorizontalOptions="StartAndExpand" Margin="-50,-30,0,0" WidthRequest="80" Padding="50">
+                    <Button Text="(  )" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="1" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="4" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="7" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="0" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center"  Margin="-95,-328,0,0" WidthRequest="80" Padding="0">
+                    <Button Text="/" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="2" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="5" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="8" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="." BackgroundColor="DarkRed" FontSize="20"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="End" Margin="0,-277,97,0" WidthRequest="80">
+                    <Button Text="*" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="3" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="6" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="9" BackgroundColor="DarkRed" FontSize="20"></Button>
+                    <Button Text="Enter" BackgroundColor="DarkRed" FontSize="15"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="End" Margin="0,-275,0,0" WidthRequest="80">
+                    <Button Text="-" BackgroundColor="DarkRed" FontSize="20" HeightRequest="135"></Button>
+                    <Button Text="+" BackgroundColor="DarkRed" FontSize="20" HeightRequest="135"></Button>
+                    
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center" Margin="10,100,0,0">
+                    <Label Text="Grant Patterson" FontSize="30" HorizontalOptions="Center" Padding="50"></Label>
+                </StackLayout>
+            </StackLayout>
+
+            
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
